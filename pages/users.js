@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import Link from 'next/link';
+
 const User = ({ users }) => (
     <div>
         <ul>
@@ -8,6 +10,10 @@ const User = ({ users }) => (
                 <li key={user.id} >{user.login}</li>
             ))}
         </ul>
+
+        <Link href="/">
+            <a>Voltar</a>
+        </Link>
     </div>
 );
 
